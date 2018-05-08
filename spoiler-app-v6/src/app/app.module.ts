@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule({ // Decoradores
   declarations: [
     AppComponent
-  ],
+  ], // En este arreglo se definen los componentes a usar.
   imports: [
     BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ], // Define todos los Modulos
+  providers: [], // Define los servicios
+  bootstrap: [AppComponent] // Componente proncipal
 })
-export class AppModule { }
+export class AppModule {
+
+}
