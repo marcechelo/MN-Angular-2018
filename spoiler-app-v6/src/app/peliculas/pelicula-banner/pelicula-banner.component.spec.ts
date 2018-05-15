@@ -10,7 +10,7 @@ describe('PeliculaBannerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ PeliculaBannerComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

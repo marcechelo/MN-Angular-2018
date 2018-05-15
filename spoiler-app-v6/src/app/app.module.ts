@@ -1,22 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import { PeliculaBannerComponent } from './peliculas/pelicula-banner/pelicula-banner.component';
 
-@NgModule({ // Decoradores
+@NgModule({
   declarations: [
     AppComponent,
     PeliculaBannerComponent
-  ], // En este arreglo se definen los componentes a usar.
+  ], // Definir todos los componentes a usarse
+     // Definin todos los pipes -> transforman datos
   imports: [
     BrowserModule,
     FormsModule
-  ], // Define todos los Modulos
-  providers: [], // Define los servicios
-  bootstrap: [AppComponent] // Componente proncipal
+  ], //  Definimos todos los Modulos
+  providers: [], // Los Servicios
+  bootstrap: [AppComponent] // Componente Principal
 })
-export class AppModule {
+// @ALGO() // Decorator
 
+
+export class AppModule {
 }

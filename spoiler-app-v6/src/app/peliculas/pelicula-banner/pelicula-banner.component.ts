@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-pelicula-banner',
@@ -7,20 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeliculaBannerComponent implements OnInit {
 
-  urlPelicula = 'https://www.screengeek.net/wp-content/uploads/2018/03/tomb-raider-movie-2018.jpg';
-  nombrePelicula = 'Tom Ridr';
-  descripcionPelicula = 'Alicia Vikander';
-  estado = 'estreno';
-  esEstreno = false;
-  textoEstreno:string;
-  clseEstreno:string
+  urlImagen = 'https://www.hdwallpapers.in/download/alicia_vikander_as_lara_croft_in_tomb_raider-wide.jpg';
+  descripcionImagen = 'Imagen de la pelicula Tomb Raider';
+  nombrePelicula = 'Tomb Raider';
+  descripcionPelicula = 'Alicia vikander,Walton Googins';
+  esEstreno = true;
+  textoEstreno: string;
+  claseEstreno: string;
+
   constructor() {
   }
 
   ngOnInit() {
-    if (this.esEstreno){
-      this.textoEstreno = 'ESTRENO';
-      this.clseEstreno = 'sa-'
+    if (this.esEstreno) {
+      this.textoEstreno = 'Estreno';
+      this.claseEstreno = 'sa-color-estado-rosado';
+    } else {
+      this.textoEstreno = 'Proximamente';
+      this.claseEstreno = 'sa-color-estado-amarillo';
     }
   }
 
