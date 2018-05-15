@@ -14,11 +14,14 @@ export class PeliculaBannerComponent implements OnInit {
   esEstreno = true;
   textoEstreno: string;
   claseEstreno: string;
+  claseAlerta: String;
+  tipoalerta: ['primary','secondary','success'];
 
   constructor() {
   }
 
   ngOnInit() {
+
     if (this.esEstreno) {
       this.textoEstreno = 'Estreno';
       this.claseEstreno = 'sa-color-estado-rosado';
@@ -26,6 +29,11 @@ export class PeliculaBannerComponent implements OnInit {
       this.textoEstreno = 'Proximamente';
       this.claseEstreno = 'sa-color-estado-amarillo';
     }
+
+
+
+
+
   }
 
 }
