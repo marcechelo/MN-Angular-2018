@@ -1,101 +1,143 @@
-<div class="row">
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel title="Simple">
+    <ng-template ngbPanelContent>
 
-  <div class="col-sm-6 text-center"
-       *ngFor="let pelicula of arregloPeliculas">
+      <button pButton type="button" label="Click" class="ui-button-success"></button>
+      <p-button label="Click"></p-button>
 
-    <app-pelicula-banner
-      [descripcionPelicula]="pelicula.descripcion"
-      [nombrePelicula]="pelicula.nombre"
-      [esEstreno]="pelicula.esEstreno"
-      [urlImagen]="pelicula.urlImagen"
-      (dioClickEnEstado)="alertar($event)"
-    >
-
-    </app-pelicula-banner>
-
-    <button (click)="pelicula.nombre = 'Adrian'"> Cambiar es estreno</button>
-
-
-  </div>
-
-
-  <div class="col-sm-2 text-center"
-       *ngFor="let numero of arregloNumeros; let indice = index">
-
-    {{indice}}: Numero {{numero}}
-
-  </div>
-
-
-  <div class="col-sm-6">
-    <h1 *ngIf="mostrarHola"> Hola </h1>
-    <!--<button (click)="mostrarHola =!mostrarHola"> Cambiar </button>-->
-  </div>
-  <div class="col-sm-6">
-    <h1 *ngIf="!mostrarHola"> Mundo </h1>
-  </div>
-
-  <div class="col-sm-3"></div>
-  <div class="col-sm-3"></div>
-  <div class="col-sm-3"></div>
-  <div class="col-sm-3"></div>
-
-</div>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+      <button mat-button color="accent">Click me!</button>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>&#9733; <b>Fancy</b> title &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Disabled" [disabled]="true">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
 
 
 <!--<div class="row">-->
-<!--<div class="col-sm-4"></div>-->
-<!--<div class="col-sm-4">-->
-<!--<app-grilla></app-grilla>-->
+
+  <!--<div class="col-sm-6 text-center"-->
+       <!--*ngFor="let pelicula of arregloPeliculas">-->
+
+    <!--<app-pelicula-banner-->
+      <!--[descripcionPelicula]="pelicula.descripcion"-->
+      <!--[nombrePelicula]="pelicula.nombre"-->
+      <!--[esEstreno]="pelicula.esEstreno"-->
+      <!--[urlImagen]="pelicula.urlImagen"-->
+      <!--(dioClickEnEstado)="alertar($event)"-->
+    <!--&gt;-->
+
+    <!--</app-pelicula-banner>-->
+
+    <!--<button (click)="pelicula.nombre = 'Adrian'"> Cambiar es estreno</button>-->
+
+
+  <!--</div>-->
+
+
+  <!--<div class="col-sm-2 text-center"-->
+       <!--*ngFor="let numero of arregloNumeros; let indice = index">-->
+
+    <!--{{indice}}: Numero {{numero}}-->
+
+  <!--</div>-->
+
+
+  <!--<div class="col-sm-6">-->
+    <!--<h1 *ngIf="mostrarHola"> Hola </h1>-->
+    <!--&lt;!&ndash;<button (click)="mostrarHola =!mostrarHola"> Cambiar </button>&ndash;&gt;-->
+  <!--</div>-->
+  <!--<div class="col-sm-6">-->
+    <!--<h1 *ngIf="!mostrarHola"> Mundo </h1>-->
+  <!--</div>-->
+
+  <!--<div class="col-sm-3"></div>-->
+  <!--<div class="col-sm-3"></div>-->
+  <!--<div class="col-sm-3"></div>-->
+  <!--<div class="col-sm-3"></div>-->
+
 <!--</div>-->
-<!--<div class="col-sm-4"></div>-->
-<!--</div>-->
 
 
-<!--
-<app-ejercicio></app-ejercicio>
-<app-pelicula-banner></app-pelicula-banner>
--->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-4"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-4">&ndash;&gt;-->
+<!--&lt;!&ndash;<app-grilla></app-grilla>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-4"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
 
-<!--<h2 [class]="clase">Two way data binding</h2>-->
-<!--<ul>-->
-<!--<li> clase <-> template [(ngModel)]</li>-->
-<!--</ul>-->
-<!--<p>Clase: {{clase}}</p>-->
-<!--<input type="text"-->
-<!--id="clase"-->
-<!--name="clase"-->
-<!--[(ngModel)]="clase"-->
-<!--&gt;-->
+<!--&lt;!&ndash;-->
+<!--<app-ejercicio></app-ejercicio>-->
+<!--<app-pelicula-banner></app-pelicula-banner>-->
+<!--&ndash;&gt;-->
 
-<!--<h2>One way data binding</h2>-->
-<!--<ul>-->
-<!--<li>Clase al template -> [class]</li>-->
-<!--<li>Template a la clase -> (click)</li>-->
-<!--</ul>-->
 
-<!--<div [hidden]="false">-->
-<!--<h1 [id]="nombreClase"-->
-<!--[class]="nombreClase"-->
-<!--&gt;Hola amigos</h1>-->
-<!--<input type="text" #textoInput >-->
-<!--<div>-->
-<!--<p>Nombre: {{nombre}}</p>-->
-<!--<p>Apellido: {{apellido}}</p>-->
-<!--<p>Edad: {{edad}}</p>-->
-<!--<p>Sueldo: {{sueldo | currency}}</p>-->
-<!--<p>Fecha nacimiento: {{fechaNacimiento | date:'yyyy/MM/dd'}}</p>-->
+<!--&lt;!&ndash;<h2 [class]="clase">Two way data binding</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<li> clase <-> template [(ngModel)]</li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Clase: {{clase}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;id="clase"&ndash;&gt;-->
+<!--&lt;!&ndash;name="clase"&ndash;&gt;-->
+<!--&lt;!&ndash;[(ngModel)]="clase"&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;&ndash;&gt;-->
 
-<!--<button (blur)="cambiarClaseDeTitulo()"-->
-<!--(click)="cambiarClaseDeTitulo()">-->
-<!--{{nombreBoton}}-->
-<!--</button>-->
-<!--</div>-->
-<!--<button (click)="aplicarClase(textoInput.value)">-->
-<!--Aplicar clase-->
-<!--</button>-->
-<!--</div>-->
+<!--&lt;!&ndash;<h2>One way data binding</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<li>Clase al template -> [class]</li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li>Template a la clase -> (click)</li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div [hidden]="false">&ndash;&gt;-->
+<!--&lt;!&ndash;<h1 [id]="nombreClase"&ndash;&gt;-->
+<!--&lt;!&ndash;[class]="nombreClase"&ndash;&gt;-->
+<!--&lt;!&ndash;&gt;Hola amigos</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" #textoInput >&ndash;&gt;-->
+<!--&lt;!&ndash;<div>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Nombre: {{nombre}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Apellido: {{apellido}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Edad: {{edad}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Sueldo: {{sueldo | currency}}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>Fecha nacimiento: {{fechaNacimiento | date:'yyyy/MM/dd'}}</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<button (blur)="cambiarClaseDeTitulo()"&ndash;&gt;-->
+<!--&lt;!&ndash;(click)="cambiarClaseDeTitulo()">&ndash;&gt;-->
+<!--&lt;!&ndash;{{nombreBoton}}&ndash;&gt;-->
+<!--&lt;!&ndash;</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<button (click)="aplicarClase(textoInput.value)">&ndash;&gt;-->
+<!--&lt;!&ndash;Aplicar clase&ndash;&gt;-->
+<!--&lt;!&ndash;</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
 
 

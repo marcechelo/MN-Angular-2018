@@ -1,10 +1,14 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import { PeliculaBannerComponent } from './peliculas/pelicula-banner/pelicula-banner.component';
 import { GrillaComponent } from './grilla/grilla.component';
+import {ButtonModule} from 'primeng/button';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material";
+
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { GrillaComponent } from './grilla/grilla.component';
      // Definin todos los pipes -> transforman datos
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot(),
+    ButtonModule,
+    NoopAnimationsModule,
+    MatButtonModule,
   ], //  Definimos todos los Modulos
   providers: [], // Los Servicios
   bootstrap: [AppComponent] // Componente Principal
